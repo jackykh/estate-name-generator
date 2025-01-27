@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>香港樓盤命名隨機生成器</title>
+  </head>
+  <body class="gradient-bg min-h-screen p-4 md:p-8 font-hk">
+    <div
+      class="max-w-6xl mx-auto bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl p-6 md:p-8">
+      <!-- 標題 -->
+      <div class="mb-8 text-center">
+        <h1 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
+          🏙️ 香港樓盤命名隨機生成器
+        </h1>
+        <div class="h-1 w-16 bg-orange-600 mx-auto rounded-full"></div>
+      </div>
+
+      <!-- 控制面板 -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+        <select id="style-select"
+          class="p-3 border-2 border-blue-900 rounded-lg focus:ring-2 focus:ring-blue-300">
+          <option value="luxury">奢華尊貴</option>
+          <option value="international">國際風尚</option>
+          <option value="number">數字系列</option>
+          <option value="uncommon">生僻字系列</option>
+        </select>
+
+        <button id="generate"
+          class="flex items-center justify-center gap-2 p-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"
+            viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 6v3l4-4-4-4v3c-4.418 0-8 3.582-8 8 0 1.591.472 3.077 1.284 4.325l1.531-1.533c-.36-.831-.555-1.739-.555-2.792 0-3.314 2.686-6 6-6zm6.716 1.675l-1.531 1.533c.36.831.555 1.739.555 2.792 0 3.314-2.686 6-6 6v-3l-4 4 4 4v-3c4.418 0 8-3.582 8-8 0-1.591-.472-3.077-1.284-4.325z" />
+          </svg>
+          立即生成
+        </button>
+      </div>
+
+      <!-- 結果顯示 -->
+      <div id="results"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    </div>
+
+    <!-- 複製提示 -->
+    <div id="copyNotice"
+      class="fixed bottom-8 left-1/2 -translate-x-1/2 bg-blue-900 text-white px-6 py-2 rounded-full opacity-0 transition-opacity duration-300 pointer-events-none">
+      已複製到剪貼簿！
+    </div>
+  </body>
+</html>
